@@ -69,7 +69,7 @@ module.exports = {
         {
             test: /\.(png|jpg|git|svg)$/i,
             loaders: [
-                "url-loader?limit=10000&name=assets/[name]-[hash:5].[ext]",
+                "url-loader?limit=10000&name=static/assets/[name]-[hash:5].[ext]",
                 "image-webpack-loader"  // 压缩图片
             ]
         },

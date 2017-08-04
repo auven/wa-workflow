@@ -5,5 +5,6 @@
     哈哈哈
 {{/block}}
 {{block 'content'}}
-<p>测试热更新，热加载，不加--hot就可以刷新</p>
+<p>欢迎来到auven的网站</p>
+<img src="../../asset/picture/app.png">
 {{/block}}
