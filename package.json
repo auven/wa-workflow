@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --config webpack.config.js --progress --display-modules --colors --display-reasons"
+    "start": "webpack-dev-server --config webpack.dev.config.js --open --inline",
+    "dev": "webpack --config webpack.dev.config.js --progress --display-modules --colors --display-reasons",
+    "build": "webpack --config webpack.config.js --progress --display-modules --colors --display-reasons"
   },
   "author": "",
   "license": "ISC",

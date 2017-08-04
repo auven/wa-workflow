@@ -10,5 +10,7 @@
 </head>
 <body>
     {{block 'content'}}{{/block}}
+
+    哈哈哈哈
 </body>
 </html>
