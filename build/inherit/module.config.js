@@ -6,6 +6,15 @@ module.exports = {
     rules: [
         {
             test: /\.js$/,
+            loader: 'eslint-loader',
+            enforce: 'pre',
+            include: [resolve('src'), resolve('test')],
+            options: {
+                formatter: require('eslint-friendly-formatter')
+            }
+        },
+        {
+            test: /\.js$/,
             loader: 'babel-loader',  // 最新版本的webpack，不让简写loader，所以必须加上“-loader”
             exclude: resolve(__dirname, '../../node_modules'), // 不处理在这个文件夹里的ES6文件，即指定不打包的范围，必须是绝对路径
             include: resolve(__dirname, '../../src/'), // 指定打包的范围，必须是绝对路径
