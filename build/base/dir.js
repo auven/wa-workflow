@@ -16,6 +16,6 @@ dir.commonDir = path.resolve(dir.srcRootDir, './common'); // 存放各个页面�
 dir.componentDir = path.resolve(dir.srcRootDir, './component'); // 存放组件，可以是纯HTML，也可以包含js/css/image等，看自己需要
 
 // 生成文件目录
-dir.buildDir = path.resolve(dir.staticRootDir, './build'); // 存放编译后生成的所有代码、资源（图片、字体等，虽然只是简单的从源目录迁移过来）
+dir.distDir = path.resolve(dir.staticRootDir, './dist'); // 存放编译后生成的所有代码、资源（图片、字体等，虽然只是简单的从源目录迁移过来）
 
 module.exports = dir;
