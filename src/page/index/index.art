@@ -1,10 +1,10 @@
 <!--index.art-->
-{{extend '../../layout/layout.art'}}
+{{extend '../../public/layout/layout.art'}}
 {{block 'title'}}{{title}}{{/block}}
 {{block 'head'}}
     哈哈哈
 {{/block}}
 {{block 'content'}}
 <p>欢迎来到auven的网站</p>
-<img src="../../asset/picture/app.png">
+<img src="../../public/asset/picture/app.png">
 {{/block}}

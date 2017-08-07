@@ -1,7 +1,8 @@
-const { resolve } = require('path')
+const { resolve } = require('path');
+const dir = require('./base/dir');
 
 module.exports = {
     alias: {
-        '@': resolve(__dirname, 'src')
+        '@': dir.srcRootDir
     }
 }
