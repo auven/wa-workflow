@@ -7,4 +7,8 @@ pluginsConfig.push(
     })
 );
 
+pluginsConfig.push(
+  new webpack.HashedModuleIdsPlugin()
+)
+
 module.exports = pluginsConfig;

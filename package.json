@@ -43,6 +43,7 @@
     "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
-    "art-template": "^4.12.1"
+    "art-template": "^4.12.1",
+    "jquery": "^3.2.1"
   }
 }

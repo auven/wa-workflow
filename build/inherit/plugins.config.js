@@ -8,15 +8,18 @@ var pageArr = require('../base/pageArr');
 
 var configPlugins = [
   new ExtractTextPlugin({
-    filename: 'static/css/[name].css'
+    filename: 'static/css/[name].[contentHash:8].css'
   }),
 
   /* 抽取出所有通用的部分 */
   new webpack.optimize.CommonsChunkPlugin({
     name: 'static/common',      // 需要注意的是，chunk的name不能相同！！！
-    filename: '[name]/bundle.[chunkhash].js',
+    filename: '[name]/bundle.[chunkHash:8].js',
     minChunks: 4,
   }),
+  new webpack.optimize.CommonsChunkPlugin({
+    name: 'runtime'
+  })
 ];
 
 pageArr.forEach((page) => {
@@ -29,7 +32,7 @@ pageArr.forEach((page) => {
         removeComments: true,
         useShortDoctype: true
     },*/
-    chunks: ['static/common', page]
+    chunks: ['runtime', 'static/common', page]
   });
   configPlugins.push(htmlPlugin);
 });
