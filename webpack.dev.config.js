@@ -20,6 +20,6 @@ module.exports = {
     entry: require('./build/entry.config'),
     output: require('./build/output.config'),
     resolve: require('./build/resolve.config'),
-    module: require('./build/inherit/module.config'),
+    module: require('./build/module.dev.config'),
     plugins: require('./build/plugins.dev.config')
 }

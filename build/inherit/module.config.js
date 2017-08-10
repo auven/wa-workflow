@@ -25,41 +25,6 @@ module.exports = {
       }
     },
     {
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [
-          {loader: 'css-loader', options: {importLoaders: 1}},
-          'postcss-loader'
-        ]
-      })
-    },
-    {
-      test: /\.less$/,
-      use: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: [
-          {loader: 'css-loader', options: {importLoaders: 1}},
-          'postcss-loader',
-          'less-loader'
-        ]
-      })
-    },
-    {
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', {
-        loader: 'postcss-loader',
-        options: {
-          plugins: function () {
-            return [
-              require('postcss-import'), // 处理css中的@import
-              require('autoprefixer')  // 自动添加浏览器前缀
-            ];
-          }
-        }
-      }, 'sass-loader']
-    },
-    {
       test: /\.html$/,
       loader: "html-loader"
     },
