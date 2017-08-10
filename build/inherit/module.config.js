@@ -71,7 +71,7 @@ module.exports = {
     {
       test: /\.(png|jpg|gif|svg)$/i,
       loaders: [
-        "url-loader?limit=10000&name=static/assets/img/[name]-[hash:5].[ext]",
+        "url-loader?limit=10000&name=static/assets/img/[name]-[Hash:8].[ext]", // 这里无法使用chunkHash。。
         "image-webpack-loader"  // 压缩图片
       ]
     },
@@ -81,7 +81,7 @@ module.exports = {
       include: dir.srcRootDir,
       loader: 'file-loader',
       options: {
-        name: 'static/assets/fonts/[name].[hash].[ext]',
+        name: 'static/assets/fonts/[name].[Hash:8].[ext]', // 这里无法使用chunkHash。。
       },
     },
     {
@@ -89,7 +89,7 @@ module.exports = {
       include: dir.srcRootDir,
       loader: 'file-loader',
       options: {
-        name: 'static/assets/fonts/[name].[hash].[ext]',
+        name: 'static/assets/fonts/[name].[Hash:8].[ext]', // 这里无法使用chunkHash。。
       },
     },
     {
