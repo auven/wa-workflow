@@ -4,7 +4,7 @@
 {{block 'head'}}
 {{/block}}
 {{block 'content'}}
-<p>欢迎来到auven的网站!!!</p>
+<p>欢迎来到auven的网站，你好呀!!!</p>
 <i class="fa fa-edit"></i>
 <img src="../../asset/picture/app.png">
 {{/block}}

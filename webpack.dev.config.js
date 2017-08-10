@@ -5,10 +5,18 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // const entryConfig = require('./build/entry.config');
 
+let dir = require('./build/base/dir');
+
 process.env.NODE_ENV = 'production';
 
 module.exports = {
-    devServer:{inline:true},
+    devServer:{
+      open: true,
+      inline:true,
+      contentBase: dir.distDir,
+      openPage: 'views',
+      overlay: true
+    },
     entry: require('./build/entry.config'),
     output: require('./build/output.config'),
     resolve: require('./build/resolve.config'),

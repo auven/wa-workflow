@@ -71,7 +71,7 @@ module.exports = {
     {
       test: /\.(png|jpg|gif|svg)$/i,
       loaders: [
-        "url-loader?limit=10000&name=static/assets/img/[name]-[Hash:8].[ext]", // 这里无法使用chunkHash。。
+        "url-loader?limit=10000&name=public/assets/img/[name]-[Hash:8].[ext]", // 这里无法使用chunkHash。。
         "image-webpack-loader"  // 压缩图片
       ]
     },
@@ -81,17 +81,17 @@ module.exports = {
       include: dir.srcRootDir,
       loader: 'file-loader',
       options: {
-        name: 'static/assets/fonts/[name].[Hash:8].[ext]', // 这里无法使用chunkHash。。
+        name: 'public/assets/fonts/[name].[Hash:8].[ext]', // 这里无法使用chunkHash。。
       },
     },
-    {
+    /*{
       test: /\.(woff|woff2|svg|eot|ttf|otf)$/,
       include: dir.srcRootDir,
       loader: 'file-loader',
       options: {
-        name: 'static/assets/fonts/[name].[Hash:8].[ext]', // 这里无法使用chunkHash。。
+        name: 'public/assets/fonts/[name].[Hash:8].[ext]', // 这里无法使用chunkHash。。
       },
-    },
+    },*/
     {
       test: /.art$/,
       use: ['art-template-loader']

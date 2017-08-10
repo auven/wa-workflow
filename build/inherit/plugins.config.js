@@ -8,23 +8,23 @@ var pageArr = require('../base/pageArr');
 
 var configPlugins = [
   new ExtractTextPlugin({
-    filename: 'static/css/[name].css?v=[contentHash:8]'
+    filename: 'public/css/[name].css?v=[contentHash:8]'
   }),
 
   /* 抽取出所有通用的部分 */
   new webpack.optimize.CommonsChunkPlugin({
     name: 'common/common',      // 需要注意的是，chunk的name不能相同！！！
-    filename: 'static/js/[name].js?v=[chunkHash:8]',
+    // filename: 'public/js/[name].js?v=[chunkHash:8]',
     minChunks: 4,
   }),
   new webpack.optimize.CommonsChunkPlugin({
-    name: 'runtime'
+    name: 'common/runtime'
   })
 ];
 
 pageArr.forEach((page) => {
   const htmlPlugin = new HtmlWebpackPlugin({
-    filename: page + '.html',
+    filename: 'views/' + page + '.html',
     template: resolve(dir.pageDir, page + '/index.art'),
     /*minify: {
         collapseBooleanAttributes: true,
@@ -32,7 +32,7 @@ pageArr.forEach((page) => {
         removeComments: true,
         useShortDoctype: true
     },*/
-    chunks: ['runtime', 'common/common', page]
+    chunks: ['common/runtime', 'common/common', page]
   });
   configPlugins.push(htmlPlugin);
 });
