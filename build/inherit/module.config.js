@@ -1,7 +1,9 @@
-const {resolve} = require('path')
-const webpack = require('webpack');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+/**
+ * @file 通用webpack module配置
+ * @author Auven
+ */
 
+const {resolve} = require('path');
 const dir = require('../base/dir');
 
 module.exports = {
@@ -17,11 +19,15 @@ module.exports = {
     },
     {
       test: /\.js$/,
-      loader: 'babel-loader',  // 最新版本的webpack，不让简写loader，所以必须加上“-loader”
-      exclude: resolve(__dirname, '../../node_modules'), // 不处理在这个文件夹里的ES6文件，即指定不打包的范围，必须是绝对路径
-      include: dir.srcRootDir, // 指定打包的范围，必须是绝对路径
+      // 最新版本的webpack，不让简写loader，所以必须加上“-loader”
+      loader: 'babel-loader',
+      // 不处理在这个文件夹里的ES6文件，即指定不打包的范围，必须是绝对路径
+      exclude: resolve(__dirname, '../../node_modules'),
+      // 指定打包的范围，必须是绝对路径
+      include: dir.srcRootDir,
       query: {
-        presets: ['latest'] // 告诉babel如何去处理我们的ES6，以哪个版本的ES6规则来处理，这里的lastest是所有的版本
+        // 告诉babel如何去处理我们的ES6，以哪个版本的ES6规则来处理，这里的lastest是所有的版本
+        presets: ['latest']
       }
     },
     {
@@ -36,8 +42,10 @@ module.exports = {
     {
       test: /\.(png|jpg|gif|svg)$/i,
       loaders: [
-        "url-loader?limit=10000&name=public/assets/img/[name]-[Hash:8].[ext]", // 这里无法使用chunkHash。。
-        "image-webpack-loader"  // 压缩图片
+        // 这里无法使用chunkHash。。
+        "url-loader?limit=10000&name=public/assets/img/[name]-[Hash:8].[ext]",
+        // 压缩图片
+        "image-webpack-loader"
       ]
     },
     {
@@ -46,20 +54,13 @@ module.exports = {
       include: dir.srcRootDir,
       loader: 'file-loader',
       options: {
-        name: 'public/assets/fonts/[name].[Hash:8].[ext]', // 这里无法使用chunkHash。。
+        // 这里无法使用chunkHash。。
+        name: 'public/assets/fonts/[name].[Hash:8].[ext]',
       },
     },
-    /*{
-      test: /\.(woff|woff2|svg|eot|ttf|otf)$/,
-      include: dir.srcRootDir,
-      loader: 'file-loader',
-      options: {
-        name: 'public/assets/fonts/[name].[Hash:8].[ext]', // 这里无法使用chunkHash。。
-      },
-    },*/
     {
       test: /.art$/,
       use: ['art-template-loader']
     }
   ]
-}
+};

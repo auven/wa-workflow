@@ -3,16 +3,14 @@
  * @author Auven
  */
 
-var pageArr = require('./base/pageArr');
-let { resolve } = require('path');
-let dir = require('./base/dir');
+const pageArr = require('./base/pageArr');
+const {resolve} = require('path');
+const dir = require('./base/dir');
 
-var configEntry = {};
+const configEntry = {};
 
 pageArr.forEach((page) => {
-    configEntry[page] = resolve(dir.pageDir, page + '/index');
+  configEntry[page] = resolve(dir.pageDir, page + '/index');
 });
-
-console.log(configEntry);
 
 module.exports = configEntry;
