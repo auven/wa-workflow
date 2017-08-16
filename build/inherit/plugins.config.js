@@ -14,16 +14,12 @@ const pageArr = require('../base/pageArr');
 const configPlugins = [
 
   // 全局shimming，自动加载模块，而不必到处 import 或 require 。
-  /*
   new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
     'window.jQuery': 'jquery',
-    'window.$': 'jquery',
-    Vue: 'vue',
-    vue: 'vue',
+    'window.$': 'jquery'
   }),
-  */
 
   new ExtractTextPlugin({
     filename: 'public/css/[name].css?v=[contentHash:8]'

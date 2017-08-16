@@ -1,12 +1,8 @@
+// require('@/common/module/common.js');
+// require('./index.less');
+// const $ = require('jquery');
+
+import '@/layout/layout';
 import './index.less';
-import '@/common/style/common.less';
 
-import '@/common/module/common';
-import 'jquery';
-
-import '@/vendor/font-awesome-4.7.0/css/font-awesome.min.css';
-
-let aa = '你好，世界!测试热更新';
-
-// alert('你好');
-console.log(aa);
+console.log('欢迎来到VHR7.5首页');

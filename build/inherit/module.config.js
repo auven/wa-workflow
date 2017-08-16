@@ -13,6 +13,7 @@ module.exports = {
       loader: 'eslint-loader',
       enforce: 'pre',
       include: [dir.srcRootDir, resolve('test')],
+      exclude: [resolve(__dirname, '../../node_modules'), dir.vendorDir],
       options: {
         formatter: require('eslint-friendly-formatter')
       }

@@ -1,10 +1,32 @@
-<!--index.art-->
 {{extend '../../layout/layout.art'}}
-{{block 'title'}}{{title}}{{/block}}
-{{block 'head'}}
-{{/block}}
+{{block 'title'}}首页{{/block}}
+
 {{block 'content'}}
-<p>欢迎来到auven的网站，你好呀!!!</p>
-<i class="fa fa-edit"></i>
-<img src="../../asset/picture/app.png">
+
+<div class="leave-balance clearfix">
+  <div class="col-xs-2">
+    <div class="co-logo">使用者公司logo，比例8*3</div>
+    <div class="co-user-name">张三</div>
+  </div>
+  <ul>
+    <li class="item">
+      <div class="main"><i class="fa fa-calendar-plus-o"></i></div>
+      <div class="title">请假</div>
+    </li>
+    <li class="item">
+      <div class="main"><span class="day">10</span> 天</div>
+      <div class="title">年假</div>
+    </li>
+    <li class="item">
+      <div class="main"><span class="day">8</span> 天</div>
+      <div class="title">已休</div>
+    </li>
+    <li class="item">
+      <div class="main"><span class="day">2</span> 天</div>
+      <div class="title">未休</div>
+    </li>
+  </ul>
+</div>
+</div>
+
 {{/block}}

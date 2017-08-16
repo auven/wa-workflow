@@ -1,6 +1,47 @@
-body {
-  background: yellow;
+.leave-balance {
+  position: relative;
+  background-color: #f8f8f8;
+  border: 1px solid #e7e7e7;
+  padding: 10px;
+
+  .co-logo {
+    width: 80%;
+    margin: 10px auto;
+    height: 0;
+    padding-bottom: 30%;
+    background: #7c7c7c;
+  }
+
+  .co-user-name {
+    text-align: center;
+  }
+
+  ul {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    li {
+      float: left;
+      padding: 0 20px;
+      cursor: pointer;
+      border-right: 1px solid #e7e7e7;
+      .main {
+        margin-bottom: 5px;
+        .day, .fa {
+          line-height: 30px;
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
 }
-
-//@import "../../public/common/style/common.less";
-
