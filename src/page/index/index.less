@@ -2,17 +2,18 @@
   position: relative;
   background-color: #f8f8f8;
   border: 1px solid #e7e7e7;
-  padding: 10px;
+  margin: 0 15px;
 
   .co-logo {
     width: 80%;
-    margin: 10px auto;
+    margin: 5px auto 0;
     height: 0;
     padding-bottom: 30%;
     background: #7c7c7c;
   }
 
   .co-user-name {
+    margin: 5px 0;
     text-align: center;
   }
 
@@ -21,14 +22,10 @@
     top: 50%;
     right: 0;
     transform: translate(0, -50%);
-
-    margin: 0;
-    padding: 0;
-    list-style: none;
     text-align: center;
     li {
       float: left;
-      padding: 0 20px;
+      padding: 0 40px;
       cursor: pointer;
       border-right: 1px solid #e7e7e7;
       .main {
@@ -44,4 +41,49 @@
       }
     }
   }
+}
+
+.index-main {
+  margin: 20px 0;
+
+  .page-setting-btn {
+    display: none;
+    margin:  0 0 15px 15px;
+  }
+
+  .panel {
+    .panel-heading {
+      position: relative;
+
+      &.handle {
+        cursor: move;
+      }
+
+      .toolbar {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        span {
+          padding: 0 5px;
+        }
+
+        .close {
+          transition: transform .4s;
+        }
+
+        .select {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
+//拖拽样式
+.sortable-ghost {
+  opacity: 0.4;
+  background-color: #F4E2C9;
 }

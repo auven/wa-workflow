@@ -27,6 +27,99 @@
     </li>
   </ul>
 </div>
+
+<div class="index-main clearfix">
+
+  <div class="page-setting-btn">
+    <span class="btn btn-default btn-save">保存</span>
+    <span class="btn btn-default btn-cancel">取消</span>
+  </div>
+
+  <div class="main-left col-sm-9">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+        <div class="toolbar">
+          <span class="close"><i class="fa fa-chevron-up"></i></span>
+          <span class="select"><input type="checkbox"></span>
+        </div>
+      </div>
+      <div class="panel-body">
+        Panel content
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title1</h3>
+        <div class="toolbar">
+          <span class="close"><i class="fa fa-chevron-up"></i></span>
+          <span class="select"><input type="checkbox"></span>
+        </div>
+      </div>
+      <div class="panel-body">
+        Panel content1
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title2</h3>
+        <div class="toolbar">
+          <span class="close"><i class="fa fa-chevron-up"></i></span>
+          <span class="select"><input type="checkbox"></span>
+        </div>
+      </div>
+      <div class="panel-body">
+        Panel content2
+      </div>
+    </div>
+
+  </div>
+
+  <div class="main-right col-sm-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title3</h3>
+        <div class="toolbar">
+          <span class="close"><i class="fa fa-chevron-up"></i></span>
+          <span class="select"><input type="checkbox"></span>
+        </div>
+      </div>
+      <div class="panel-body">
+        Panel content3
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title4</h3>
+        <div class="toolbar">
+          <span class="close"><i class="fa fa-chevron-up"></i></span>
+          <span class="select"><input type="checkbox"></span>
+        </div>
+      </div>
+      <div class="panel-body">
+        Panel content4
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title5</h3>
+        <div class="toolbar">
+          <span class="close"><i class="fa fa-chevron-up"></i></span>
+          <span class="select"><input type="checkbox"></span>
+        </div>
+      </div>
+      <div class="panel-body">
+        Panel content5
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 {{/block}}

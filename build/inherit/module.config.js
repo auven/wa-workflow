@@ -8,6 +8,16 @@ const dir = require('../base/dir');
 
 module.exports = {
   rules: [
+    /*{ // 本来是想暴露全局$的，但是这里不需要它就可以暴露了
+      test: require.resolve('jquery'),
+      use: [{
+        loader: 'expose-loader',
+        options: 'jQuery'
+      },{
+        loader: 'expose-loader',
+        options: '$'
+      }]
+    },*/
     {
       test: /\.js$/,
       loader: 'eslint-loader',

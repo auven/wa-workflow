@@ -1,5 +1,52 @@
 .header {
+  margin: 0 15px;
+
   .fa {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .navbar-collapse .navbar-nav > li {
+    position: inherit;
+  }
+
+  .navbar {
+    margin-bottom: 10px;
+  }
+
+  .navbar-list {
+    margin-bottom: 10px;
+    .navbar-list-item {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+
+  .navbar-list-item {
+    li {
+      float: left;
+      padding: 0 20px;
+      a {
+        background: #fff;
+      }
+    }
+  }
+
+  .navbar-nav {
+    > li:hover {
+      background: #e7e7e7;
+      .navbar-list-item {
+        display: block;
+      }
+    }
+    .navbar-list-item {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -1px;
+      padding: 11px 0 10px 0;
+      width: 100%;
+    }
   }
 }
